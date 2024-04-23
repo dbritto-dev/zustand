@@ -12,3 +12,6 @@ pnpm-lock.yaml
 coverage/
 .rpt2_cache/
 .idea
+website/.vitepress/cache
+website/.vitepress/build
+old_docs/
