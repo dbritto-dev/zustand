@@ -1,5 +1,6 @@
 import { fileURLToPath } from 'node:url'
 import { type DefaultTheme, defineConfig } from 'vitepress'
+import { OramaPlugin as Orama } from '@orama/plugin-vitepress'
 
 export default defineConfig({
   srcDir: fileURLToPath(new URL('../../docs', import.meta.url)),
@@ -33,6 +34,12 @@ export default defineConfig({
       copyright: 'Copyright © 2024-present Danilo Britto',
     },
   },
+
+  extends: {
+    vite: {
+      plugins: [Orama() as never],
+    },
+  },
 })
 
 function nav(): DefaultTheme.NavItem[] {
@@ -64,7 +71,7 @@ function sidebarLearn(): DefaultTheme.SidebarItem[] {
           ],
         },
         {
-          text: 'Instalation',
+          text: 'Installation',
           collapsed: false,
           items: [
             {
@@ -100,7 +107,7 @@ function sidebarLearn(): DefaultTheme.SidebarItem[] {
             },
             {
               text: 'Selecting Data and Preventing Re-renders with selectors and equality function',
-              link: '/selecting-data-and-preventing-re-renderes-with-with-selectors-and-equality-function',
+              link: '/selecting-data-and-preventing-re-renders-with-with-selectors-and-equality-function',
             },
             {
               text: 'Isolating State Between Components',
@@ -117,12 +124,12 @@ function sidebarLearn(): DefaultTheme.SidebarItem[] {
               link: '/using-middlewares',
             },
             {
-              text: 'Writting Immutable Updates with Immer Middleware',
-              link: '/writting-immutable-update-with-immer-middelware',
+              text: 'Writing Immutable Updates with Immer Middleware',
+              link: '/writing-immutable-update-with-immer-middleware',
             },
             {
               text: 'Persisting State with Persist Middleware',
-              link: '/persisting-statw-with-persist-middleware',
+              link: '/persisting-state-with-persist-middleware',
             },
             {
               text: 'Extracting State Logic into a Reducer with Redux and Devtools Middlewares',

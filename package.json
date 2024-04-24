@@ -205,6 +205,7 @@
   },
   "homepage": "https://github.com/pmndrs/zustand",
   "dependencies": {
+    "@orama/plugin-vitepress": "^2.0.16",
     "use-sync-external-store": "1.2.0"
   },
   "devDependencies": {
