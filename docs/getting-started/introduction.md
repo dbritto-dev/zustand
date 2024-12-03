@@ -4,7 +4,9 @@ description: How to use Zustand
 nav: 0
 ---
 
-<div class="flex justify-center mb-4">
+# What is Zustand?
+
+<div style="margin-top: 1rem; margin-bottom: 1rem;">
   <img src="../bear.jpg" alt="Logo Zustand" />
 </div>
 

@@ -327,10 +327,8 @@ const useGameStore = create(
 )
 
 export default function Board() {
-  const [squares, setSquares] = useGameStore((state) => [
-    state.squares,
-    state.setSquares,
-  ])
+  const squares = useGameStore((state) => state.squares)
+  const setSquares = useGameStore((state) => state.setSquares)
 
   return (
     <div
@@ -389,10 +387,8 @@ to the square at the specified index (`i`) if is not already filled.
 
 ```tsx {7-12,29}
 export default function Board() {
-  const [squares, setSquares] = useGameStore((state) => [
-    state.squares,
-    state.setSquares,
-  ])
+  const squares = useGameStore((state) => state.squares)
+  const setSquares = useGameStore((state) => state.setSquares)
 
   function handleClick(i) {
     if (squares[i]) return
@@ -471,10 +467,8 @@ export default function Board() {
     state.xIsNext,
     state.setXIsNext,
   ])
-  const [squares, setSquares] = useGameStore((state) => [
-    state.squares,
-    state.setSquares,
-  ])
+  const squares = useGameStore((state) => state.squares)
+  const setSquares = useGameStore((state) => state.setSquares)
   const player = xIsNext ? 'X' : 'O'
 
   function handleClick(i) {
@@ -578,10 +572,8 @@ export default function Board() {
     state.xIsNext,
     state.setXIsNext,
   ])
-  const [squares, setSquares] = useGameStore((state) => [
-    state.squares,
-    state.setSquares,
-  ])
+  const squares = useGameStore((state) => state.squares)
+  const setSquares = useGameStore((state) => state.setSquares)
   const winner = calculateWinner(squares)
   const turns = calculateTurns(squares)
   const player = xIsNext ? 'X' : 'O'
@@ -678,10 +670,8 @@ export default function Board() {
     state.xIsNext,
     state.setXIsNext,
   ])
-  const [squares, setSquares] = useGameStore((state) => [
-    state.squares,
-    state.setSquares,
-  ])
+  const squares = useGameStore((state) => state.squares)
+  const setSquares = useGameStore((state) => state.setSquares)
   const winner = calculateWinner(squares)
   const turns = calculateTurns(squares)
   const player = xIsNext ? 'X' : 'O'
@@ -801,10 +791,8 @@ function Board() {
     state.xIsNext,
     state.setXIsNext,
   ])
-  const [squares, setSquares] = useGameStore((state) => [
-    state.squares,
-    state.setSquares,
-  ])
+  const squares = useGameStore((state) => state.squares)
+  const setSquares = useGameStore((state) => state.setSquares)
   const winner = calculateWinner(squares)
   const turns = calculateTurns(squares)
   const player = xIsNext ? 'X' : 'O'
